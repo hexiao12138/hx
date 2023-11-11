@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "ServiceSchematic",
+  "title": "Hello Option Schema",
+  "type": "object",
+  "description": "Service Schematic",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "service名称",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "请问你想设置的service名称是什么?"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

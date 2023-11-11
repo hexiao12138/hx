@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "webReact": {
+      "description": "Create a react-web-template",
+      "factory": "./web-react/index#webReact",
+      "schema": "./web-react/schema.json"
+    },
+    "service": {
+      "aliases": ["s"],
+      "description": "Create a service.",
+      "factory": "./service/index#service",
+      "schema": "./service/schema.json"
+    }
+  }
+}

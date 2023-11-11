@@ -1,0 +1,11 @@
+import { useMutation, useQuery } from '@tanstack/react-query';
+import RequestService from '~/utils/http/http-service';
+import { AddWithdrawReqType } from './<%= dasherize(name) %>.interface';
+import { map } from 'rxjs/operators';
+const GET_WITHDRAWWECHAT_QR = "data/getWithdrawWechatQr"; //获取二维码提现图片
+//	获取二维码提现图片
+export function useGetWithdrawWechatQr() {
+  return useQuery(['getWithdrawWechatQr'], () => new RequestService().get(GET_WITHDRAWWECHAT_QR).pipe(map((data: string) => {
+    return data;
+  })).toPromise())
+}
