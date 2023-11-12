@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "ZustandSchematic",
+  "title": "Hello Option Schema",
+  "type": "object",
+  "description": "Zustand Schematic",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "zustand名称",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "请问你想设置的zustand名是什么?"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

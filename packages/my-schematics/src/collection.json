@@ -11,6 +11,12 @@
       "description": "Create a service.",
       "factory": "./service/index#service",
       "schema": "./service/schema.json"
+    },
+    "zustand": {
+      "aliases": ["z"],
+      "description": "Create a zustand.",
+      "factory": "./zustand/index#zustand",
+      "schema": "./zustand/schema.json"
     }
   }
 }
